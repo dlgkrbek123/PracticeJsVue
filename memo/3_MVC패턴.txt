@@ -1,0 +1,28 @@
+MVC패턴이란?
+
+Model - View - Controller
+
+Model
+  db의 데이터를 가져와서 전달
+  api를 이용해서 데이터를 가져와서 전달
+
+View
+  데이터를 화면에 그리는 역할
+  사용자 입력을 처리하는 역할
+
+  html, css, js
+
+Model과 View는 직접 연결 x
+
+Controller
+  Model에서 받은 데이터를 View에 전달
+  View의 입력 데이터를 Model에 전달
+
+M - C - V
+
+
+lite-server로 실행
+
+
+
+  
