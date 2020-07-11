@@ -10,9 +10,6 @@ FormView.setup = function (el) {
   this.resetEl = el.querySelector("[type=reset]");
   this.showResetBtn(false);
   this.bindEvents();
-  this.on("submit", (e) => {
-    e.preventDefault();
-  });
 
   return this;
 };
