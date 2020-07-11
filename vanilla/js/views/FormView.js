@@ -52,4 +52,9 @@ FormView.onClickReset = function () {
   this.emit("@reset");
 };
 
+FormView.setValue = function (value = "") {
+  this.inputEl.value = value;
+  this.showResetBtn(true);
+};
+
 export default FormView;
