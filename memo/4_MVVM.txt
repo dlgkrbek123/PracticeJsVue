@@ -1,0 +1,33 @@
+mvvm에서 controller가 vm으로 대체됨
+
+View Model : 
+  모델과 비슷하지만 다르다.
+  모델로부터 데이터를 가져오며 뷰에 적합하게 가공됨
+  VM이 변하면 View에 바로 반영
+  View 모델 하나와 View가 1대1 대응됨
+
+
+        Model - VM - View
+  
+
+어떻게 View Model이 변한다고 View에 자동반영될까?
+
+const h1 = document.createElement("h1")
+document.body.appendChild(h1)
+
+const viewModel = {}
+let model = ""
+
+
+// 객체의 property를 get하고 set할시 호출될 함수를
+// 지정 가능
+
+Object.defineProperty(viewModel, "model", {
+  get() { return model },
+  set(val) { 
+    model = val
+    h1.innerHTML = model
+   }
+})
+
+viewModel을 바꾸면 
